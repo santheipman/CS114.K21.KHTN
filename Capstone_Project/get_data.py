@@ -6,7 +6,22 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.proxy import Proxy, ProxyType
 import random
 import csv
+import time
 
+"""Write all present posts to file"""
+def write():
+    csv_file = open('posts_{}_{}.csv'.format(t, jump_count//WRITE_TO_FILE), 'w')
+    csv_writer = csv.writer(csv_file)
+    
+    post_links = browser.find_elements_by_xpath("//div[@class='_5pbx userContent _3576']")
+    for post in post_links:
+        csv_writer.writerow([post.text])
+    
+    csv_file.close()
+    return len(post_links)
+
+
+"""Get a list of proxies"""
 def get_proxies():
     url = 'https://free-proxy-list.net/'
     response = requests.get(url)
@@ -31,32 +46,31 @@ webdriver.DesiredCapabilities.FIREFOX['proxy'] = {
 }
 
 
-"""File to save data"""
-csv_file = open('posts.csv', 'w')
-csv_writer = csv.writer(csv_file)
-
-
 """Request the page"""
 browser = webdriver.Firefox(executable_path='./geckodriver')
 browser.get("https://www.facebook.com/groups/UIT.K2018/")
 
 
 """Initialize parameters for scrolling"""
+t = int(time.time()) # for file name
+total_post = 0
 jump_count = 0
-running = True
-TOTAL_JUMP = 500
+TOTAL_JUMP = 800
+WRITE_TO_FILE = 100
 
 
 """Scroll down to load posts"""
-while running:
+while 1:
     try:
         if jump_count > TOTAL_JUMP:
             break
         jump_count += 1
         print(jump_count)
 
+        if jump_count % WRITE_TO_FILE == 0:
+            total_post = write()
+
         scroll_rand = random.randint(1,100)
-        # print("rand =", scroll_rand)
         if scroll_rand < 15:
             print("jump 1")
             length = str(scroll_rand*3 + 300)
@@ -72,19 +86,10 @@ while running:
         print("sleep :", sleep_rand)
         sleep(sleep_rand)
     except:
-        print("Proxy dieee!")
+        print("Proxy died!")
         break
 
-
-"""Parse post content and save to csv file"""
-post_links = browser.find_elements_by_xpath("//div[@class='_5pbx userContent _3576']")
-for post in post_links:
-    # print(post.text)
-    csv_writer.writerow([post.text])
-    post_text_list.append(post.text)
-    # print()
-
-
-print(len(post_text_list))
-csv_file.close()
+        
+print(f"Jumps: {jump_count}, posts: {total_post}")
+input("Script ended. Press enter to close the browser")
 browser.close()
