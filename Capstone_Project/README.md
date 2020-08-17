@@ -5,12 +5,14 @@ In this project, I use Machine Learning to classify the posts on [UIT Facebook G
 ## Getting data
 
 I use Selenium to repeat scrolling the page, then extract content of the posts
+
 ``` get_data.py ```
 
 ## Removing duplicates before annotation
 
 Because there are posts which are posted in multiple groups, we need to remove those duplicates.
 After removing duplicates, the dataset size decreased from 13154 to 9094.
+
 ``` remove_duplicate_before_annotation.ipynb ```
 
 ## Annotation
@@ -20,9 +22,11 @@ I use [Doccano](https://github.com/doccano/doccano) for annotation.
 ## Extracting features and classifying
 
 Loading data + Taking a look at data + Feature Extraction + Classification + Hyperparameter Tuning
+
 ``` text_classification.ipynb ```
 
 Vectorizer model: ``` tfidf.pickle ```
+
 Tuned Linear SVC model: ``` finalized_model.sav ```
 
 ## Testing
