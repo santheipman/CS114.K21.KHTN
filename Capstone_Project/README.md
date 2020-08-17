@@ -31,7 +31,7 @@ Tuned Linear SVC model: ``` finalized_model.sav ```
 
 ## Testing
 
-Just run all cells in ``` test.ipynb ```, it will install required packages and clone this repo.
+Just run all cells in ``` test.ipynb ```, it will install required packages, clone this repo and run the code.
 
 ## Reference
 [Scrape data using Selenium](https://www.youtube.com/watch?v=EawbYWaTP_k)
