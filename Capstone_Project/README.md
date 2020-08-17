@@ -25,6 +25,8 @@ Loading data + Taking a look at data + Feature Extraction + Classification + Hyp
 
 ``` text_classification.ipynb ```
 
+#### Saved model
+
 Vectorizer model: ``` tfidf.pickle ```
 
 Tuned Linear SVC model: ``` finalized_model.sav ```
