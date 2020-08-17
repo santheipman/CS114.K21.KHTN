@@ -31,8 +31,12 @@ Just run all cells in ``` test.ipynb ```, it will install required packages and 
 
 ## Reference
 [Scrape data using Selenium](https://www.youtube.com/watch?v=EawbYWaTP_k)
+
 [Vietnamese Tokenizer](https://github.com/undertheseanlp/underthesea)
+
 [Vietnamese Text Normalizer](https://github.com/langmaninternet/VietnameseTextNormalizer)
+
 [Pandas Dataframe](https://pandas.pydata.org/pandas-docs/stable/user_guide/dsintro.html)
+
 [Scikit-learn 's Document](https://scikit-learn.org/stable/)
 
