@@ -36,13 +36,17 @@ Tuned Linear SVC model: ``` finalized_model.sav ```
 Just run all cells in ``` test.ipynb ```, it will install required packages, clone this repo and run the code.
 
 ## Reference
-[Scrape data using Selenium](https://www.youtube.com/watch?v=EawbYWaTP_k)
+[Scrape data using Selenium (Vietnamese)](https://www.youtube.com/watch?v=EawbYWaTP_k)
 
 [Vietnamese Tokenizer](https://github.com/undertheseanlp/underthesea)
 
 [Vietnamese Text Normalizer](https://github.com/langmaninternet/VietnameseTextNormalizer)
 
-[Pandas Dataframe](https://pandas.pydata.org/pandas-docs/stable/user_guide/dsintro.html)
+[Bag-of-words and Tf-idf Tutorial (Vietnamese)](https://codetudau.com/bag-of-words-tf-idf-xu-ly-ngon-ngu-tu-nhien/index.html)
+
+[Vietnamese Text Classification Tutorial (Vietnamese)](https://viblo.asia/p/phan-loai-van-ban-tu-dong-bang-machine-learning-nhu-the-nao-4P856Pa1ZY3)
+
+[Pandas Dataframe Tutorial](https://pandas.pydata.org/pandas-docs/stable/user_guide/dsintro.html)
 
 [Scikit-learn 's Document](https://scikit-learn.org/stable/)
 
