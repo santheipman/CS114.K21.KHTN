@@ -2,7 +2,7 @@
 
 In this project, I use Machine Learning to classify the posts on [UIT Facebook Groups](https://www.facebook.com/groups/UIT.K2018/) into 4 topics: notification, finding lost items, personal question, other.
 
-Read ```18520143_ML_Final.pdf``` for more details about this project.
+Read ```18520143_ML_Final.pdf``` (written in Vietnamese) for more details about this project.
 
 ## Getting data
 
